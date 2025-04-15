@@ -1,0 +1,156 @@
+body {
+    font-family: "Times New Roman", Times, serif; /* Основной шрифт изменен на Times New Roman */
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    color: #333;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* Основная таблица с фото и информацией */
+.main-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    table-layout: fixed;
+}
+
+.main-table td {
+    vertical-align: top;
+    padding: 15px;
+    width: 33.33%; /* Все столбцы одинаковой ширины */
+}
+
+.photo-container {
+    text-align: center;
+}
+
+.profile-photo {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+    border: none;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+h1 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+h2 {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-link {
+    margin-right: 10px;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+}
+
+/* Таблица скиллов */
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.skills-table td {
+    border: 0px solid #ddd;
+    padding: 15px;
+    width: 33.33%; /* Все столбцы одинаковой ширины */
+    vertical-align: top;
+}
+
+.skills-table h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+/* Стили для голубых сердечек */
+.heart {
+    position: absolute;
+    font-size: 24px;
+    animation: heartbeat 1.5s infinite;
+    opacity: 0.7;
+    z-index: 100;
+    color: #3498db; /* Голубой цвет */
+    text-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.heart:nth-child(1) {
+    top: 6%;
+    left: 53%;
+    animation-delay: 0s;
+}
+
+footer {
+text-align: center;
+width: 100%;
+padding: 20px 0;
+}
+
+.social-links {
+display: flex;
+justify-content: left;
+gap: 20px; /* Расстояние между иконками */
+margin: 20px 0; /* Отступ сверху и снизу */
+}
+
+.social-link {
+display: inline-block;
+transition: transform 0.3s ease; /* Плавное увеличение при наведении */
+}
+
+.social-link:hover {
+transform: scale(1.1); /* Увеличиваем иконку при наведении */
+}
+.email-style {
+font-weight: bold;
+text-decoration: underline;
+font-size: 1.2em;
+vertical-align:bottom; /* Чтобы выровнять иконку с текстом */
+}
+
+.email-style img {
+margin-right: 8px; /* Отступ между иконкой и текстом */
+}
